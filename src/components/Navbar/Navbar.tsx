@@ -2,10 +2,13 @@ import React from "react";
 import { useBoardContext } from "../../context/BoardsContext";
 import "./Navbar.scss";
 
-type Props = {};
+type Props = {
+    toggleShowCreateTask: () => void;
+};
 
-export default function Navbar() {
+export default function Navbar({ toggleShowCreateTask }: Props) {
     const { currentProject } = useBoardContext();
+
     return (
         <nav className="navbar">
             <div className="navbar-logo-container">
@@ -13,7 +16,9 @@ export default function Navbar() {
             </div>
             <div className="navbar-main-container">
                 <h4>{currentProject.name}</h4>
-                <button className="btn">Add new task</button>
+                <button className="btn" onClick={() => toggleShowCreateTask()}>
+                    Add new task
+                </button>
             </div>
         </nav>
     );
