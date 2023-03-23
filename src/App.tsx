@@ -1,6 +1,7 @@
 import Board from "./components/Board/Board";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Navbar from "./components/Navbar/Navbar";
+import CreateTaskModel from "./components/CreateTaskModel/CreateTaskModel";
 
 export default function App() {
     return (
@@ -10,6 +11,7 @@ export default function App() {
                 <Sidebar />
                 <Board />
             </div>
+            <CreateTaskModel />
         </div>
     );
 }
