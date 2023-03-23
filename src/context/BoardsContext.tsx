@@ -2,6 +2,7 @@ import React, { Children, createContext, useContext, useState } from "react";
 import { v4 as uuid4 } from "uuid";
 import { Project, projectsData } from "./projects-data";
 import { useLocalStorage } from "usehooks-ts";
+
 interface Context {
     projects: Project[];
     createProject: (name: string) => void;
@@ -51,6 +52,12 @@ export default function BoardsContextProvider({ children }: Props) {
     function changeBoard(index: number) {
         setSelectedIndex(index);
     }
+
+    function createTicket(
+        title: string,
+        description: string,
+        subtasks: string[]
+    ) {}
 
     return (
         <BoardsContext.Provider
