@@ -4,13 +4,14 @@
     height: 100vh;
     width: 100vw;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     .model-card {
         position: relative;
         background-color: var(--bg-gray);
         padding: 32px;
+        margin: 20px;
         border-radius: 10px;
         width: 100%;
         max-width: 480px;
@@ -25,6 +26,7 @@
         .model-title {
             margin-bottom: 20px;
         }
+
         label {
             font-size: 14px;
             color: var(--text-gray);
@@ -36,13 +38,12 @@
         textarea,
         select {
             width: 100%;
-            display: block;
             border-radius: 5px;
-            border: solid 1px var(--bg-lines);
+            border: 1px solid var(--bg-lines);
             background-color: var(--bg-lines);
             padding: 10px 20px;
-            color: var(--text);
             outline: none;
+            color: var(--text);
             margin-bottom: 6px;
             resize: vertical;
             max-height: 140px;
@@ -54,25 +55,24 @@
 
         .subtask-container {
             position: relative;
+
             svg {
                 width: 18px;
                 height: 18px;
-                position: absolute;
-                color: var(--text-gray);
+                right: 5px;
                 top: 50%;
                 transform: translateY(-50%);
-                right: 5px;
                 cursor: pointer;
+                position: absolute;
+                color: var(--text-gray);
             }
         }
 
         button {
             border-radius: 8px;
             width: 100%;
-            padding: 12px 20px;
-            margin-bottom: 12px;
-            top: 5px;
-            right: 5px;
+            padding: 12px 0px;
+            margin-bottom: 15px;
         }
     }
 }

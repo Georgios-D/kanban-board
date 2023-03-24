@@ -1,5 +1,5 @@
-import React, { Children, createContext, useContext, useState } from "react";
-import { v4 as uuid4 } from "uuid";
+import React, { createContext, useContext, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { Project, projectsData } from "./projects-data";
 import { useLocalStorage } from "usehooks-ts";
 
@@ -10,7 +10,7 @@ interface Context {
     createTicket: (
         title: string,
         description: string,
-        subtask: string[],
+        subtasks: string[],
         index: number
     ) => void;
     currentProject: Project;
@@ -45,7 +45,7 @@ export default function BoardsContextProvider({ children }: Props) {
             ...projects,
             {
                 name,
-                id: uuid4(),
+                id: uuidv4(),
                 board: [
                     { name: "Todo", tickets: [] },
                     { name: "Doing", tickets: [] },
@@ -70,7 +70,7 @@ export default function BoardsContextProvider({ children }: Props) {
             title,
             description,
             tasks: subtasks,
-            id: uuid4(),
+            id: uuidv4(),
         });
 
         setProjects([...projects]);

@@ -11,9 +11,8 @@
         align-items: center;
 
         .board-title-icon {
-            width: 20px;
-            height: 20px;
-            background: blue;
+            width: 15px;
+            height: 15px;
             border-radius: 50%;
 
             &.todo {
@@ -34,9 +33,11 @@
             color: var(--text-gray);
         }
     }
+
     .board-column {
         display: flex;
         flex-direction: column;
         gap: 15px;
+        margin-bottom: 10px;
     }
 }

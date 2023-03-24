@@ -3,11 +3,11 @@ import "./CreateTaskModel.scss";
 import { X } from "react-feather";
 import { useBoardContext } from "../../context/BoardsContext";
 
-type props = {
+type Props = {
     toggleShowCreateTask: () => void;
 };
 
-export default function CreateTaskModel({ toggleShowCreateTask }: props) {
+export default function CreateTaskModel({ toggleShowCreateTask }: Props) {
     const { createTicket } = useBoardContext();
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -26,11 +26,11 @@ export default function CreateTaskModel({ toggleShowCreateTask }: props) {
 
                 <h3 className="model-title">Create new ticket</h3>
 
-                <label htmlFor="Title">Title</label>
+                <label htmlFor="title">Title</label>
                 <input
                     type="text"
                     id="title"
-                    placeholder="This is a title..."
+                    placeholder="this is a title..."
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                 />
@@ -38,10 +38,11 @@ export default function CreateTaskModel({ toggleShowCreateTask }: props) {
                 <label htmlFor="description">Description</label>
                 <textarea
                     id="description"
-                    placeholder="This is a description..."
+                    placeholder="this is a description..."
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                 />
+
                 <label htmlFor="status">Status</label>
                 <select
                     name="status"
@@ -59,7 +60,7 @@ export default function CreateTaskModel({ toggleShowCreateTask }: props) {
                     <div className="subtask-container">
                         <input
                             type="text"
-                            placeholder="This is a subtask..."
+                            placeholder="this is a title..."
                             onChange={(e) => {
                                 subtasks[index] = e.target.value;
                                 setSubtasks([...subtasks]);
@@ -78,8 +79,9 @@ export default function CreateTaskModel({ toggleShowCreateTask }: props) {
                     className="btn"
                     onClick={() => setSubtasks([...subtasks, ""])}
                 >
-                    Add Subtask
+                    Add new task
                 </button>
+
                 <button
                     className="btn"
                     onClick={() => {
@@ -87,7 +89,7 @@ export default function CreateTaskModel({ toggleShowCreateTask }: props) {
                         toggleShowCreateTask();
                     }}
                 >
-                    Create Ticket
+                    Create ticket
                 </button>
             </div>
         </div>

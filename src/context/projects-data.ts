@@ -1,4 +1,4 @@
-import { v4 as uuid4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
 export interface Ticket {
     id: string;
@@ -15,17 +15,23 @@ export interface Project {
 
 export const projectsData: Project[] = [
     {
-        name: "hej",
-        id: uuid4(),
+        name: "då",
+        id: uuidv4(),
         board: [
             {
                 name: "Todo",
                 tickets: [
                     {
-                        title: "First ticket",
-                        description: "issa ticket",
-                        id: uuid4(),
-                        tasks: ["task1", "task2"],
+                        title: "First ever ticket",
+                        description: "This is a ticket",
+                        id: uuidv4(),
+                        tasks: ["task 1", "task 2"],
+                    },
+                    {
+                        title: "Secound ever ticket",
+                        description: "This is also a ticket",
+                        id: uuidv4(),
+                        tasks: ["task 1", "task 2"],
                     },
                 ],
             },
@@ -33,10 +39,10 @@ export const projectsData: Project[] = [
                 name: "Doing",
                 tickets: [
                     {
-                        title: "third ticket",
-                        description: "issa ticket",
-                        id: uuid4(),
-                        tasks: ["task1", "task2"],
+                        title: "Secound ever ticket",
+                        description: "This is also a ticket",
+                        id: uuidv4(),
+                        tasks: ["task 1", "task 2"],
                     },
                 ],
             },
@@ -44,10 +50,28 @@ export const projectsData: Project[] = [
                 name: "Done",
                 tickets: [
                     {
-                        title: "second ticket",
-                        description: "issa ticket",
-                        id: uuid4(),
-                        tasks: ["task1", "task2"],
+                        title: "Secound ever ticket",
+                        description: "This is also a ticket",
+                        id: uuidv4(),
+                        tasks: ["task 1", "task 2"],
+                    },
+                    {
+                        title: "Secound ever ticket",
+                        description: "This is also a ticket",
+                        id: uuidv4(),
+                        tasks: ["task 1", "task 2"],
+                    },
+                    {
+                        title: "Secound ever ticket",
+                        description: "This is also a ticket",
+                        id: uuidv4(),
+                        tasks: ["task 1", "task 2"],
+                    },
+                    {
+                        title: "Secound ever ticket",
+                        description: "This is also a ticket",
+                        id: uuidv4(),
+                        tasks: ["task 1", "task 2"],
                     },
                 ],
             },
